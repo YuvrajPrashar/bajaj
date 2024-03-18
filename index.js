@@ -9,7 +9,7 @@ app.use(express.urlencoded());
 
 app.post("/bfhl", (req, res) => {
   try {
-    const user = "Yuvraj Prashar";
+    const user = "Yuvraj_Prashar_18052003";
     const userEmail = "yuvraj1598.be21@chitkara.edu.in";
     const collegeRollNumber = "2110991598";
 
@@ -33,7 +33,7 @@ app.post("/bfhl", (req, res) => {
 
     res.status(200).json(response);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error: error.message, is_success: false });
   }
 });
 
