@@ -1,10 +1,11 @@
 const express = require("express");
-const cors=require("cors")
+const cors = require("cors");
 const app = express();
-app.use(cors({origin:"*",credentials:true}));
+app.use(cors({ origin: "*", credentials: true }));
 const port = 3000;
 
 app.use(express.json());
+app.use(express.urlencoded());
 
 app.post("/bfhl", (req, res) => {
   try {
@@ -13,7 +14,7 @@ app.post("/bfhl", (req, res) => {
     const collegeRollNumber = "2110991598";
 
     // Updated error handling for inputArray
-    const inputArray = req.body.array || [];
+    const inputArray = req.body.data || [];
     const evenNumbers = inputArray.filter((num) => num % 2 === 0);
     const oddNumbers = inputArray.filter((num) => num % 2 !== 0);
     const alphabetArray = inputArray
