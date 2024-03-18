@@ -24,7 +24,7 @@ app.post("/bfhl", (req, res) => {
     const response = { 
       is_success: true,
       user_id: user,
-      email_id: userEmail,
+      email: userEmail,
       roll_number: collegeRollNumber,
       odd_numbers: oddNumbers,
       even_numbers: evenNumbers,
