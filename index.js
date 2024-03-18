@@ -21,14 +21,14 @@ app.post("/bfhl", (req, res) => {
       .filter((char) => /[a-zA-Z]/.test(char))
       .map((char) => char.toUpperCase());
 
-    const response = {
-      user_id: user,
+    const response = { 
       is_success: true,
+      user_id: user,
       email_id: userEmail,
-      college_roll_number: collegeRollNumber,
-      array_for_even_numbers: evenNumbers,
-      array_for_odd_numbers: oddNumbers,
-      array_for_alphabets: alphabetArray,
+      roll_number: collegeRollNumber,
+      odd_numbers: oddNumbers,
+      even_numbers: evenNumbers,
+      alphabets: alphabetArray,
     };
 
     res.status(200).json(response);
